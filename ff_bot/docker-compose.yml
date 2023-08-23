@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+  gamedaybot:
+    build:
+      context: .
+    restart: always
+    environment:
+      #This is your Webhook URL from the Discord Settings page (REQUIRED)
+      DISCORD_WEBHOOK_URL: "https://discord.com/api/webhooks/1143894534913278133/WWgb6iBfXmczVxWQPP8EKl8B0tNPPRYHJMyoF2lN2BUX_VNfanPhUgTWJEfnA18KCArl"
+      #ESPN league id (REQUIRED)
+      LEAGUE_ID: "432348805" 
+      # #When the bot will start paying attention and sending messages to your chat.
+      # START_DATE:2023-08-23
+      # #When the bot will stop paying attention and stop sending messages to your chat.
+      # END_DATE:2024-03-23
+      # #ESPN League year
+      LEAGUE_YEAR: "2023"
+      # #Required for private leagues. See Private Leagues Section for documentation
+      ESPN_S2: "AEBFDHoTmPFqEf8yp2oM%2BhDfIIsQ4vVIOLkyKvemvUjA6C23P5PRnZQuLTtwP31NhILePIATfh5LDI7l39hBncAIYP%2BysNxulA%2BgyUwzWhC6tmDc2KE4HDjg7a3SAS2wMcqqMMxp7K06MZKyBAVXjYoriZArA%2FaLexC%2BAzYrKF2GMtBwVhYS5oMhHGFNzq90d0KbOmUuD47qv0E2DJpPH5hM4d%2FRy2%2BkBaesGQ9tPPdsQR5BeFNQJhxMypBX92G5w4EceT7%2F8Wf%2BM4da18fkLBSBDUM3rGaPqzpQ%2BGTWA4BThg%3D%3D"
+      SWID: "{27DF1621-F63A-4CD6-924F-9B984EA68051}"
+      # #The timezone that the messages will look to send in. (America/New_York by default)
+      # TIMEZONE:America/Chicago
+      # #The message that the bot will say when it is started (leave blank for no message)
+      # INIT_MSG:
+      # #If set to True, when standings are posted on Wednesday it will also include top half scoring wins
+      # TOP_HALF_SCORING:
+      # #If set to True, random phrases will appear after certain bot messages
+      # RANDOM_PHRASE:
+      # #If set to True, when extra trophies will be included when final score update runs
+      # EXTRA_TROPHIES: 
+      # #If set to True, will move updates accordingly for a COVID delayed game to Tuesday
+      # TUES_SCHED:
+      # #Assign a score value for the Heads Up report to warn users about (default is 0)
+      # SCORE_WARNING:
+      # #If set to True, will provide Free-Agent Acquisition Budget (FAAB) dollars to the waiver report
+      # FAAB: 
+      # #See User and Emote IDs section for documentation on these
+      # USERS: ""
+      # EMOTES: ""
+      # #Used for troubleshooting--set to 1 so bot will provide test output instead
+      # TEST: 0
